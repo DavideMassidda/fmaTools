@@ -1,0 +1,7 @@
+======== Release 0.0
+0.0-2
+    * Aggiornate fmaIC, plotIC e tileplot.
+0.0-1
+    * Aggiunte le funzioni multifmaIC, tileplot e factorplot.
+0.0-0
+    * Primo rilascio della libreria fmaTools.
