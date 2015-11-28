@@ -29,5 +29,5 @@ plotLC <- function(dataset,fit,fn=mean,ylim=NULL,bw=FALSE)
     xl <- xlab("Item")
     yl <- ylab("Score")
     main <- ggtitle("Item scores of classes")
-    gp + geom_point(size=4,pch=21,col="black") + geom_line(size=1) + th + sy + col + xl + yl + main
+    gp + geom_line(size=1) + geom_point(size=4) + th + sy + col + xl + yl + main
 }
