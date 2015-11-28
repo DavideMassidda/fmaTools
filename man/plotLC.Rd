@@ -5,7 +5,7 @@
 \description{Plot the item scores of latent classes estimated by the function \code{fma}.}
 
 \usage{
-plotLC(dataset, fit, fn=mean, ylim = NULL)
+plotLC(dataset, fit, fn=mean, ylim = NULL, bw = FALSE)
 }
 
 \arguments{
@@ -20,6 +20,9 @@ plotLC(dataset, fit, fn=mean, ylim = NULL)
     }
     \item{ylim}{
         Limits of vertical axis for the graph.
+    }
+    \item{bw}{
+        Logical value indicating if the graph must be filled in black and white.
     }
 }
 
