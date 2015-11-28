@@ -1,4 +1,4 @@
-plotLC <- function(dataset,fit,fn=mean,ylim=NULL)
+plotLC <- function(dataset,fit,fn=mean,ylim=NULL,bw=FALSE)
 {
     nLC <- max(fit$index)
     nItem  <- ncol(dataset)
@@ -18,10 +18,14 @@ plotLC <- function(dataset,fit,fn=mean,ylim=NULL)
         ylim[1] <- floor(ylim[1])
         ylim[2] <- ceiling(ylim[2])
     }
+    if(!bw)
+        pal <- "Set1"
+    else
+        pal <- 6
     gp <- ggplot(data=x,aes_string(x="Item",y="Stat",group="Class",colour="Class",ymax=3))+geom_point()
     th <- theme(axis.text.x=element_text(angle=45, colour="black"), legend.direction="horizontal", legend.position="top")
     sy <- scale_y_continuous(limits = ylim)
-    col <- scale_colour_brewer(palette="Set1")
+    col <- scale_colour_brewer(palette=pal)
     xl <- xlab("Item")
     yl <- ylab("Score")
     main <- ggtitle("Item scores of classes")
