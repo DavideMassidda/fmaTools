@@ -7,7 +7,7 @@
 
 \usage{
 fmaIC(...)
-plotIC(object, main = "Information criteria")
+plotIC(object, main = "Information criteria", bw = FALSE)
 }
 
 \arguments{
@@ -19,6 +19,9 @@ plotIC(object, main = "Information criteria")
     }
     \item{main}{
         Character: the title of the plot.
+    }
+    \item{bw}{
+        Logical value indicating if the graph must be filled in black and white.
     }
 }
 
