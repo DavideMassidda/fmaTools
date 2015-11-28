@@ -1,4 +1,6 @@
 ======== Release 0.0
+0.0-3
+   * Aggiunta l'opzione per colorazione in bianco e nero su tutte le funzioni grafiche.
 0.0-2
     * Aggiornate fmaIC, plotIC e tileplot.
 0.0-1
