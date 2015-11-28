@@ -44,16 +44,20 @@ fmaIC <- function(...)
     return(index)
 }
 
-plotIC <- function(object, main="Information criteria")
+plotIC <- function(object, main="Information criteria",  bw=FALSE)
 {
     x <- stack(object[,which(colnames(object)!="ClassNum")])
     colnames(x) <- c("Value","Index")
     x$ClassNum <- rep.int(object$ClassNum,4)
     x$Index <- factor(x$Index,levels=c("AIC","CAIC","BIC","ABIC"))
     x$ClassNum <- factor(x$ClassNum,ordered=TRUE)
+    if(!bw)
+        pal <- "Set1"
+    else
+        pal <- 6
     gp <- ggplot(data=x,aes_string(x="ClassNum",y="Value",group="Index",colour="Index"))+geom_point()
     th <- theme(axis.text.x=element_text(colour="black"), legend.direction="horizontal", legend.position="top")
-    col <- scale_colour_brewer(palette="Set1")
+    col <- scale_colour_brewer(palette=pal)
     xl <- xlab("Number of latent classes")
     main <- ggtitle(main)
     gp + geom_point(size=4) + geom_line(size=1) + th + col + xl + main
