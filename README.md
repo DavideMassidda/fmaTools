@@ -7,11 +7,11 @@ fmaTools è una libreria per il software statistico R che integra le funzioni de
 
 Il presente repository contiene i file sorgente della libreria. Per installare fmaTools da repository, è necessario installare la libreria devtools, quindi lanciare il comando:
 
-devtools::install_github("fmaTools", "DavideMassidda")
+devtools::install_github("DavideMassidda/fmaTools")
 
 <b>Dipendenze</b>
 
-Il corretto funzionamento della libreria è vincolato all'installazione dei pacchetti FactMixtAnalysis e ggplot2.
+Il corretto funzionamento del pacchetto è vincolato all'installazione dei pacchetti FactMixtAnalysis e ggplot2.
 
 Autore: Davide Massidda
 - e-mail: davide.massidda@gmail.com
