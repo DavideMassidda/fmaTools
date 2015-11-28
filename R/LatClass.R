@@ -22,12 +22,19 @@ plotLC <- function(dataset,fit,fn=mean,ylim=NULL,bw=FALSE)
         pal <- "Set1"
     else
         pal <- 6
-    gp <- ggplot(data=x,aes_string(x="Item",y="Stat",group="Class",colour="Class",ymax=3))+geom_point()
+    gp <- ggplot(data=x,aes_string(x="Item",y="Stat",group="Class",colour="Class",ymax=3))
+    ln1 <- geom_line(size=2,colour="gray20")
+    ln2 <- geom_line(size=1.4)
+    pt1 <- geom_point(size=5,colour="gray20")
+    pt2 <- geom_point(size=4.4)
     th <- theme(axis.text.x=element_text(angle=45, colour="black"), legend.direction="horizontal", legend.position="top")
     sy <- scale_y_continuous(limits = ylim)
     col <- scale_colour_brewer(palette=pal)
     xl <- xlab("Item")
     yl <- ylab("Score")
     main <- ggtitle("Item scores of classes")
-    gp + geom_line(size=1) + geom_point(size=4) + th + sy + col + xl + yl + main
+    if(!bw)
+        gp + ln2 + pt2 + th + sy + col + xl + yl + main
+    else
+        gp + ln1 + ln2 + pt1 + pt2 + th + sy + col + xl + yl + main
 }
