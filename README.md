@@ -1,18 +1,17 @@
-Strumenti per integrare il pacchetto FactMixtAnalysis
+Instruments to complete the package FactMixtAnalysis
 -
+fmaTools is a package for the R statistical software which integrates the package FactMixtAnalysis. The aim of the project is to assist the user of the package FactMixtAnalysis provinding easy functions to use the commands of this package. Starting from one or more models estimated by using the function fma(), fmaTools provides several commands useful to extract fit indices, choose the best model and visualize the results.
 
-fmaTools è una libreria per il software statistico R che integra le funzioni del pacchetto FactMixtAnalysis per la factor mixture analysis. A partire dalla stima del modello effettuata tramite la funzione fma(), fmaTools fornisce alcuni comandi utili per estrarre indici di adattamento del modello e visualizzare i risultati.
+<b>Installation</b>
 
-<b>Installazione</b>
-
-Il presente repository contiene i file sorgente della libreria. Per installare fmaTools da repository, è necessario installare la libreria devtools, quindi lanciare il comando:
+This repository contains the source files of the package fmaTools. To install fmaTools from repository, you must firstly install the package devtools, afterwards launch the command:
 
 devtools::install_github("DavideMassidda/fmaTools")
 
-<b>Dipendenze</b>
+<b>Dependencies</b>
 
-Il corretto funzionamento del pacchetto è vincolato all'installazione dei pacchetti FactMixtAnalysis e ggplot2.
+The functioning of the package depends from the installation of the packages FactMixtAnalysis and ggplot2.
 
-Autore: Davide Massidda
+Author: Davide Massidda
 - e-mail: davide.massidda@gmail.com
 - web-site: www.InsulaR.it
